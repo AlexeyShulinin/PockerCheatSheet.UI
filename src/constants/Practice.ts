@@ -1,0 +1,23 @@
+export const Practice = {
+    Eyebrow: "THE FUNDAMENTALS",
+    TitleLead: "Know your",
+    TitleEnd: "hand.",
+    Description: "Every great player starts here. Read the cards, trust your instincts, and make it stick.",
+    Daily: "DAILY PRACTICE",
+    DailySubtitle: "A little better, every hand.",
+    HandRecognition: "HAND RECOGNITION",
+    RoundLabel: (round: number) => `ROUND ${round}`,
+    DealHand: "Deal a new hand",
+    YourHand: "YOUR HAND",
+    FiveCards: "5 CARDS",
+    StandardDeck: "STANDARD DECK",
+    StudyHand: "TAKE A MOMENT TO STUDY YOUR HAND",
+    Prompt: "What have you got?",
+    PromptHelp: "Choose the strongest hand you can make.",
+    Encouragement: "NO RUSH. YOU'VE GOT THIS.",
+    CheckHand: "Check hand",
+    NiceRead: "NICE READ",
+    AnswerReveal: "THAT'S THE ONE",
+    NextHand: "Next hand",
+    StandardDeckNote: "A standard deck. No jokers. All skill."
+};

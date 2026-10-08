@@ -1,0 +1,1 @@
+export { HandDetail } from "./HandDetail"

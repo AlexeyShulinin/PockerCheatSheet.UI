@@ -1,0 +1,175 @@
+.stats-card,
+.streak-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+}
+
+.stats-card {
+    padding: 16px 15px 13px;
+}
+
+.stats-title {
+    align-items: center;
+    color: #788275;
+    display: flex;
+    font-size: 9px;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: .75px;
+}
+
+.live-tag {
+    align-items: center;
+    background: #eef3ec;
+    border-radius: 8px;
+    color: #72826e;
+    display: flex;
+    font-size: 8px;
+    gap: 4px;
+    padding: 4px 6px;
+}
+
+.live-tag i {
+    background: #7da47a;
+    border-radius: 50%;
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+}
+
+.stats-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 19px 0 15px;
+}
+
+.stats-metrics > div + div {
+    border-left: 1px solid var(--line);
+    padding-left: 14px;
+}
+
+.stats-metrics strong {
+    color: #364539;
+    display: block;
+    font-size: 30px;
+    font-weight: 550;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.metric-total,
+.metric-unit {
+    color: #8f9b89;
+    font-size: 12px;
+}
+
+.stats-metrics > div > span {
+    color: #a2a39a;
+    display: block;
+    font-size: 8px;
+    letter-spacing: .55px;
+    margin-top: 7px;
+}
+
+.progress-track {
+    height: 5px;
+}
+
+.progress-track .fui-ProgressBar__bar {
+    background: #edefe9;
+}
+
+.progress-track .fui-ProgressBar__progress {
+    background: #779273;
+}
+
+.stats-foot {
+    color: #9a9c91;
+    display: flex;
+    font-size: 9px;
+    justify-content: space-between;
+    margin-top: 9px;
+}
+
+.streak-card {
+    align-items: center;
+    background: #faf9f5;
+    display: flex;
+    padding: 13px;
+}
+
+.streak-flame {
+    align-items: center;
+    background: #f3eae1;
+    border-radius: 8px;
+    color: #c07f5e;
+    display: flex;
+    font-size: 17px;
+    height: 34px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 34px;
+}
+
+.streak-copy > span,
+.streak-best > span {
+    color: #9a9a8f;
+    display: block;
+    font-size: 8px;
+    letter-spacing: .6px;
+}
+
+.streak-copy strong {
+    color: #455445;
+    display: block;
+    font-size: 19px;
+    font-weight: 550;
+    margin-top: 2px;
+}
+
+.streak-copy small {
+    color: #999b91;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.streak-best {
+    border-left: 1px solid var(--line);
+    margin-left: auto;
+    padding-left: 11px;
+}
+
+.streak-best strong {
+    color: #72856c;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+@media (max-width: 560px) {
+    .stats-card {
+        padding: 12px 11px;
+    }
+
+    .stats-metrics strong {
+        font-size: 25px;
+    }
+
+    .stats-metrics > div + div {
+        padding-left: 9px;
+    }
+
+    .stats-metrics > div > span {
+        font-size: 7px;
+    }
+
+    .stats-foot {
+        font-size: 8px;
+    }
+
+    .streak-card {
+        padding: 10px;
+    }
+}

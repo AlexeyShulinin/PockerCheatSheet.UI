@@ -1,0 +1,15 @@
+import type { PokerHand } from "../types/poker"
+import { HandNames } from "../constants/HandNames"
+
+export const PokerHands = [
+    { id: 1, name: HandNames.RoyalFlush, description: "The ace-high straight flush. The rarest and strongest hand in poker.", exampleCards: [{ rank: 14, suit: "♠" }, { rank: 13, suit: "♠" }, { rank: 12, suit: "♠" }, { rank: 11, suit: "♠" }, { rank: 10, suit: "♠" }], odds: "1 in 649,740", chance: "0.00015%" },
+    { id: 2, name: HandNames.StraightFlush, description: "Five consecutive cards, all in the same suit.", exampleCards: [{ rank: 9, suit: "♥" }, { rank: 8, suit: "♥" }, { rank: 7, suit: "♥" }, { rank: 6, suit: "♥" }, { rank: 5, suit: "♥" }], odds: "1 in 72,193", chance: "0.00139%" },
+    { id: 3, name: HandNames.FourOfAKind, description: "Four cards of the same rank, plus any fifth card.", exampleCards: [{ rank: 12, suit: "♠" }, { rank: 12, suit: "♥" }, { rank: 12, suit: "♦" }, { rank: 12, suit: "♣" }, { rank: 4, suit: "♠" }], odds: "1 in 4,165", chance: "0.0240%" },
+    { id: 4, name: HandNames.FullHouse, description: "Three cards of one rank and a pair of another rank.", exampleCards: [{ rank: 8, suit: "♠" }, { rank: 8, suit: "♥" }, { rank: 8, suit: "♦" }, { rank: 11, suit: "♣" }, { rank: 11, suit: "♠" }], odds: "1 in 694", chance: "0.1441%" },
+    { id: 5, name: HandNames.Flush, description: "Any five cards of the same suit, not in consecutive order.", exampleCards: [{ rank: 13, suit: "♦" }, { rank: 11, suit: "♦" }, { rank: 8, suit: "♦" }, { rank: 4, suit: "♦" }, { rank: 2, suit: "♦" }], odds: "1 in 509", chance: "0.1965%" },
+    { id: 6, name: HandNames.Straight, description: "Five consecutive cards of any suits. An ace can be high or low.", exampleCards: [{ rank: 9, suit: "♠" }, { rank: 8, suit: "♥" }, { rank: 7, suit: "♦" }, { rank: 6, suit: "♣" }, { rank: 5, suit: "♠" }], odds: "1 in 255", chance: "0.3925%" },
+    { id: 7, name: HandNames.ThreeOfAKind, description: "Three cards of the same rank, plus two unmatched cards.", exampleCards: [{ rank: 7, suit: "♠" }, { rank: 7, suit: "♥" }, { rank: 7, suit: "♦" }, { rank: 13, suit: "♣" }, { rank: 2, suit: "♠" }], odds: "1 in 47", chance: "2.1128%" },
+    { id: 8, name: HandNames.TwoPair, description: "Two different pairs, plus one unmatched card.", exampleCards: [{ rank: 11, suit: "♠" }, { rank: 11, suit: "♥" }, { rank: 4, suit: "♦" }, { rank: 4, suit: "♣" }, { rank: 14, suit: "♠" }], odds: "1 in 21", chance: "4.7539%" },
+    { id: 9, name: HandNames.OnePair, description: "Two cards of the same rank, plus three unmatched cards.", exampleCards: [{ rank: 14, suit: "♠" }, { rank: 14, suit: "♥" }, { rank: 9, suit: "♦" }, { rank: 5, suit: "♣" }, { rank: 2, suit: "♠" }], odds: "1 in 2.4", chance: "42.2569%" },
+    { id: 10, name: HandNames.HighCard, description: "No pair, straight, or flush. Your highest card plays.", exampleCards: [{ rank: 14, suit: "♠" }, { rank: 11, suit: "♥" }, { rank: 8, suit: "♦" }, { rank: 5, suit: "♣" }, { rank: 2, suit: "♠" }], odds: "1 in 2", chance: "50.1177%" }
+] satisfies PokerHand[]

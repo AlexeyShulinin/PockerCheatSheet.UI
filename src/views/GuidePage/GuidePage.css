@@ -1,0 +1,34 @@
+.guide-layout {
+    align-items: start;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) 370px;
+}
+
+.guide-page .page-footer {
+    margin-top: 20px;
+}
+
+@media (max-width: 1050px) {
+    .guide-layout {
+        grid-template-columns: minmax(0, 1fr) 320px;
+    }
+}
+
+@media (max-width: 760px) {
+    .guide-layout {
+        grid-template-columns: minmax(0, 1fr) 300px;
+    }
+}
+
+@media (max-width: 560px) {
+    .guide-page .page-heading {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .guide-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

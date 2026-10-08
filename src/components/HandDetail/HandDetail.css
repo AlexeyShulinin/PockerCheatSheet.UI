@@ -1,0 +1,200 @@
+.guide-detail {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    min-height: 470px;
+    overflow: hidden;
+    position: relative;
+}
+
+.guide-detail-top {
+    align-items: center;
+    border-bottom: 1px solid #efeee8;
+    color: #8c9386;
+    display: flex;
+    font-size: 8px;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: .9px;
+    padding: 15px 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.guide-suits {
+    color: #b7b9ad;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.guide-big-rank {
+    color: #f3f4ef;
+    font-size: 205px;
+    font-weight: 700;
+    letter-spacing: -15px;
+    line-height: .9;
+    position: absolute;
+    right: 13px;
+    top: 38px;
+}
+
+.guide-detail-body {
+    padding: 30px 18px 19px;
+    position: relative;
+    z-index: 1;
+}
+
+.guide-detail-body .eyebrow {
+    font-size: 8px;
+}
+
+.guide-detail-body h2 {
+    color: #374439;
+    font-size: 26px;
+    font-weight: 650;
+    letter-spacing: -.8px;
+    margin: 11px 0 8px;
+}
+
+.guide-detail-body > p {
+    color: #83867d;
+    font-size: 12px;
+    line-height: 1.65;
+    max-width: 300px;
+    min-height: 52px;
+}
+
+.example-label {
+    color: #90968b;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .9px;
+    margin-top: 23px;
+}
+
+.example-hand {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-start;
+    margin-top: 12px;
+}
+
+.playing-card.example-card {
+    border-radius: 7px;
+    flex: 1 1 0;
+    height: 86px;
+    max-width: 59px;
+    min-width: 0;
+}
+
+.example-card .card-corner {
+    font-size: 14px;
+    left: 5px;
+    top: 5px;
+}
+
+.example-card .card-corner span {
+    font-size: 10px;
+}
+
+.example-card .card-center {
+    font-size: 28px;
+}
+
+.example-card .card-corner-bottom {
+    bottom: 5px;
+    left: auto;
+    right: 5px;
+    top: auto;
+}
+
+.guide-odds {
+    border-top: 1px solid #eeede7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    padding-top: 13px;
+}
+
+.guide-odds > div + div {
+    border-left: 1px solid #eeede7;
+    padding-left: 12px;
+}
+
+.guide-odds span {
+    color: #a1a297;
+    display: block;
+    font-size: 7px;
+    letter-spacing: .65px;
+}
+
+.guide-odds strong {
+    color: #53634f;
+    display: block;
+    font-size: 15px;
+    font-weight: 650;
+    margin-top: 6px;
+}
+
+@media (max-width: 560px) {
+    .guide-detail {
+        min-height: 410px;
+    }
+
+    .guide-big-rank {
+        font-size: 170px;
+    }
+
+    .guide-detail-body {
+        padding-top: 23px;
+    }
+
+    .guide-detail-body > p {
+        min-height: 0;
+    }
+
+    .example-label {
+        margin-top: 21px;
+    }
+
+    .example-hand {
+        gap: 5px;
+    }
+
+    .playing-card.example-card {
+        height: clamp(76px, 21vw, 88px);
+        max-width: 61px;
+    }
+
+    .example-card .card-corner {
+        font-size: 13px;
+        left: 4px;
+        top: 4px;
+    }
+
+    .example-card .card-corner span {
+        font-size: 9px;
+    }
+
+    .example-card .card-center {
+        font-size: 25px;
+    }
+
+    .example-card .card-corner-bottom {
+        bottom: 4px;
+        left: auto;
+        right: 4px;
+        top: auto;
+    }
+
+    .guide-odds {
+        margin-top: 19px;
+    }
+}
+
+@media (max-width: 370px) {
+    .playing-card.example-card {
+        height: 70px;
+    }
+}

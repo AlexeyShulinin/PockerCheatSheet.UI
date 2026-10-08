@@ -1,0 +1,137 @@
+.page-content {
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 42px 5% 22px;
+}
+
+.page-heading {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 29px;
+}
+
+.eyebrow {
+    align-items: center;
+    color: #758274;
+    display: flex;
+    font-size: 9px;
+    font-weight: 700;
+    gap: 7px;
+    letter-spacing: 1.2px;
+}
+
+.eyebrow-line {
+    background: #a4b49c;
+    display: inline-block;
+    height: 1px;
+    width: 16px;
+}
+
+.page-heading h1 {
+    color: #2f3c32;
+    font-size: clamp(37px, 4vw, 50px);
+    font-weight: 600;
+    letter-spacing: -2.3px;
+    line-height: 1.08;
+    margin: 11px 0 9px;
+}
+
+.page-heading h1 span {
+    color: #789070;
+    font-weight: 500;
+}
+
+.heading-copy {
+    color: #85877f;
+    font-size: 13px;
+    line-height: 1.65;
+    max-width: 470px;
+}
+
+.guide-practice-button.fui-Button {
+    background: #395e45;
+    border: 1px solid #395e45;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 18px;
+    margin-bottom: 3px;
+    min-height: 40px;
+    min-width: 128px;
+    padding: 8px 12px;
+}
+
+.guide-practice-button.fui-Button:hover {
+    background: #294b36;
+    border-color: #294b36;
+    color: #fff;
+}
+
+.guide-practice-button span {
+    font-size: 14px;
+}
+
+@media (min-width: 1450px) {
+    .page-content {
+        padding-top: 54px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .page-content {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+@media (max-width: 760px) {
+    .page-content {
+        padding: 29px 5% 18px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        margin-bottom: 21px;
+    }
+}
+
+@media (max-width: 560px) {
+    .page-content {
+        padding-top: 24px;
+    }
+
+    .page-heading {
+        margin-bottom: 19px;
+    }
+
+    .page-heading h1 {
+        font-size: 39px;
+    }
+
+    .heading-copy {
+        font-size: 12px;
+        max-width: 340px;
+    }
+
+    .guide-practice-button.fui-Button {
+        flex: 0 0 auto;
+        gap: 8px;
+        max-width: 100%;
+        min-width: 0;
+        padding: 8px 9px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 370px) {
+    .page-content {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .guide-practice-button.fui-Button {
+        font-size: 10px;
+    }
+}

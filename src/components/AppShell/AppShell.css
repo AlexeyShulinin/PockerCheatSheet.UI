@@ -1,0 +1,21 @@
+.app-shell {
+    min-height: 100vh;
+}
+
+.main-content {
+    margin-left: 232px;
+    min-height: 100vh;
+}
+
+@media (max-width: 1050px) {
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 760px) {
+    .main-content {
+        margin-left: 0;
+        padding-bottom: calc(65px + env(safe-area-inset-bottom));
+    }
+}

@@ -1,0 +1,117 @@
+.playing-card {
+    animation: deal-in .35s both;
+    animation-delay: calc(var(--card-index) * 55ms);
+    background: linear-gradient(145deg, #fffefa, #f4f1e8);
+    border: 1px solid #e9e4d9;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px #16251e38;
+    color: #28352d;
+    display: flex;
+    flex: 1 1 0;
+    height: 106px;
+    justify-content: center;
+    max-width: 75px;
+    min-width: 0;
+    position: relative;
+    transform: rotate(calc((var(--card-index) - 2) * 1.5deg));
+    transition: transform .2s;
+}
+
+.playing-card:hover {
+    transform: translateY(-5px) rotate(0);
+    z-index: 2;
+}
+
+.red-suit {
+    color: #c45249;
+}
+
+.card-corner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 700;
+    left: 6px;
+    line-height: 1;
+    position: absolute;
+    top: 6px;
+}
+
+.card-corner span {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.card-center {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.card-corner-bottom {
+    bottom: 6px;
+    left: auto;
+    right: 6px;
+    top: auto;
+    transform: rotate(180deg);
+}
+
+@keyframes deal-in {
+    from {
+        opacity: 0;
+        transform: translateY(9px) rotate(calc((var(--card-index) - 2) * 1.5deg));
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1450px) {
+    .playing-card {
+        height: 118px;
+        max-width: 82px;
+    }
+}
+
+@media (max-width: 560px) {
+    .playing-card {
+        border-radius: 7px;
+        height: clamp(83px, 25vw, 100px);
+    }
+
+    .card-corner {
+        font-size: 15px;
+        left: 4px;
+        top: 5px;
+    }
+
+    .card-corner span {
+        font-size: 10px;
+    }
+
+    .card-center {
+        font-size: clamp(27px, 8vw, 35px);
+    }
+
+    .card-corner-bottom {
+        bottom: 5px;
+        left: auto;
+        right: 4px;
+        top: auto;
+    }
+}
+
+@media (max-width: 370px) {
+    .playing-card {
+        height: 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .playing-card {
+        animation-duration: .01ms;
+        animation-iteration-count: 1;
+        transition-duration: .01ms;
+    }
+}

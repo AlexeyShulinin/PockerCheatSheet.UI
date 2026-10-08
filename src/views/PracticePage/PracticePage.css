@@ -1,0 +1,94 @@
+.practice-layout {
+    align-items: start;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) 245px;
+}
+
+.daily-badge {
+    align-items: center;
+    background: #f0f2eb;
+    border: 1px solid #e8ebe2;
+    border-radius: 9px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2px;
+    padding: 10px 13px;
+}
+
+.daily-badge > span {
+    color: #72896c;
+    font-size: 18px;
+}
+
+.daily-badge strong,
+.daily-badge small {
+    display: block;
+}
+
+.daily-badge strong {
+    color: #536450;
+    font-size: 9px;
+    letter-spacing: .8px;
+}
+
+.daily-badge small {
+    color: #999d92;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.practice-layout .stats-column {
+    display: grid;
+    gap: 12px;
+}
+
+.session-note {
+    align-items: center;
+    color: #a09f95;
+    display: flex;
+    font-size: 9px;
+    gap: 7px;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.session-note span {
+    color: #87957d;
+    font-size: 12px;
+}
+
+@media (max-width: 1050px) {
+    .practice-layout {
+        gap: 13px;
+        grid-template-columns: minmax(0, 1fr) 220px;
+    }
+}
+
+@media (max-width: 760px) {
+    .daily-badge {
+        display: none;
+    }
+
+    .practice-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .practice-layout .stats-column {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .practice-layout .learn-card {
+        grid-row: span 2;
+    }
+
+    .session-note {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 560px) {
+    .practice-layout .stats-column {
+        gap: 8px;
+    }
+}
