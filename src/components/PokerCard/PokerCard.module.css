@@ -46,6 +46,8 @@
 .cardCenter {
     font-size: 38px;
     line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 .cardCornerBottom {
