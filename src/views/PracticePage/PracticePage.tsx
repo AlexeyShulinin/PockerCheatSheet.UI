@@ -8,21 +8,22 @@ import { usePokerQuiz } from "../../hooks/usePokerQuiz"
 import { Icons } from "../../constants/Icons"
 import { Practice } from "../../constants/Practice"
 import { Routes } from "../../constants/Routes"
-import "./PracticePage.css"
+import pageStyles from "../../components/PageHeading/PageHeading.module.css"
+import styles from "./PracticePage.module.css"
 
 export function PracticePage() {
     const navigate = useNavigate()
     const quiz = usePokerQuiz()
 
     return (
-        <div className="page-content">
+        <div className={pageStyles.pageContent}>
             <PageHeading
                 eyebrow={Practice.Eyebrow}
                 title={<>{Practice.TitleLead} <span>{Practice.TitleEnd}</span></>}
                 description={Practice.Description}
-                action={<div className="daily-badge"><span>{Icons.Sparkle}</span><div><strong>{Practice.Daily}</strong><small>{Practice.DailySubtitle}</small></div></div>}
+                action={<div className={styles.dailyBadge}><span>{Icons.Sparkle}</span><div><strong>{Practice.Daily}</strong><small>{Practice.DailySubtitle}</small></div></div>}
             />
-            <div className="practice-layout">
+            <div className={styles.practiceLayout}>
                 <QuizCard
                     question={quiz.question}
                     selected={quiz.selected}
@@ -33,7 +34,7 @@ export function PracticePage() {
                     onCheck={quiz.checkAnswer}
                     onNext={quiz.nextQuestion}
                 />
-                <aside className="stats-column">
+                <aside className={styles.statsColumn}>
                     <SessionStats
                         correct={quiz.stats.correct}
                         answered={quiz.stats.answered}
@@ -41,8 +42,8 @@ export function PracticePage() {
                         streak={quiz.stats.streak}
                         bestStreak={quiz.stats.bestStreak}
                     />
-                    <QuickTip onShowGuide={() => navigate(Routes.HandRankings)} />
-                    <div className="session-note"><span>{Icons.SessionClub}</span> {Practice.StandardDeckNote}</div>
+                    <QuickTip className={styles.tipGridSpan} onShowGuide={() => navigate(Routes.HandRankings)} />
+                    <div className={styles.sessionNote}><span>{Icons.SessionClub}</span> {Practice.StandardDeckNote}</div>
                 </aside>
             </div>
             <PageFooter />

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import { Sidebar } from "../Sidebar"
-import "./AppShell.css"
+import styles from "./AppShell.module.css"
 
 type AppShellProps = {
   children: ReactNode
@@ -8,9 +8,9 @@ type AppShellProps = {
 
 export function AppShell({ children }: AppShellProps) {
     return (
-        <main className="app-shell">
+        <main className={styles.appShell}>
             <Sidebar />
-            <section className="main-content">{children}</section>
+            <section className={styles.mainContent}>{children}</section>
         </main>
     )
 }

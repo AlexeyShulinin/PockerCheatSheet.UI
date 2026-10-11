@@ -1,4 +1,4 @@
-.quiz-card {
+.quizCard {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 14px;
@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-.quiz-topline {
+.quizTopline {
     align-items: center;
     display: flex;
     height: 52px;
@@ -14,7 +14,7 @@
     padding: 0 20px;
 }
 
-.round-label {
+.roundLabel {
     align-items: center;
     color: #748272;
     display: flex;
@@ -24,35 +24,35 @@
     letter-spacing: .9px;
 }
 
-.round-dot {
+.roundDot {
     background: #769471;
     border-radius: 50%;
     height: 6px;
     width: 6px;
 }
 
-.round-divider {
+.roundDivider {
     color: #d0d1c9;
 }
 
-.round-label .muted {
+.roundLabel .muted {
     color: #aaa99f;
     font-size: 9px;
     font-weight: 550;
 }
 
-.sound-button.fui-Button {
+.soundButton:global(.fui-Button) {
     color: #8c9588;
     font-size: 20px;
     min-width: 0;
     padding: 4px;
 }
 
-.sound-button.fui-Button:hover {
+.soundButton:global(.fui-Button):hover {
     color: #416849;
 }
 
-.table-area {
+.tableArea {
     background-color: #315a43;
     background-image: radial-gradient(ellipse at 50% 35%, #446b51 0%, #315942 62%, #284b39 100%);
     border-radius: 8px;
@@ -63,7 +63,7 @@
     position: relative;
 }
 
-.table-area::before {
+.tableArea::before {
     border: 1px solid #a3ba9040;
     border-radius: 50%;
     content: "";
@@ -72,7 +72,7 @@
     position: absolute;
 }
 
-.table-watermark {
+.tableWatermark {
     color: #ffffff08;
     font-size: 210px;
     left: 50%;
@@ -83,8 +83,8 @@
     transform: translateX(-50%);
 }
 
-.table-caption,
-.table-footer {
+.tableCaption,
+.tableFooter {
     align-items: center;
     color: #ffffffa6;
     display: flex;
@@ -96,7 +96,7 @@
     z-index: 1;
 }
 
-.table-caption-right {
+.tableCaptionRight {
     align-items: center;
     color: #ffffff7a;
     display: flex;
@@ -104,14 +104,14 @@
     gap: 8px;
 }
 
-.table-caption-right i {
+.tableCaptionRight i {
     background: #d69a7f;
     border-radius: 50%;
     height: 4px;
     width: 4px;
 }
 
-.cards-row {
+.cardsRow {
     align-items: center;
     display: flex;
     gap: clamp(7px, 1.5vw, 14px);
@@ -123,19 +123,19 @@
     z-index: 1;
 }
 
-.table-footer {
+.tableFooter {
     color: #ffffff8a;
     font-size: 7px;
     letter-spacing: .75px;
 }
 
-.table-footer > span:last-child {
+.tableFooter > span:last-child {
     color: #ffffff65;
     font-size: 9px;
     letter-spacing: 3px;
 }
 
-.table-footer-dot {
+.tableFooterDot {
     background: #dbaa78;
     border-radius: 50%;
     display: inline-block;
@@ -145,19 +145,19 @@
     width: 4px;
 }
 
-.answer-area {
+.answerArea {
     min-height: 220px;
     padding: 19px 20px 17px;
 }
 
-.answer-prompt {
+.answerPrompt {
     align-items: center;
     display: flex;
     gap: 12px;
     margin-bottom: 15px;
 }
 
-.prompt-number {
+.promptNumber {
     align-items: center;
     border: 1px solid #e8e9e1;
     border-radius: 7px;
@@ -169,8 +169,8 @@
     width: 34px;
 }
 
-.answer-prompt h2,
-.result-copy h2 {
+.answerPrompt h2,
+.resultCopy h2 {
     color: #39443b;
     font-size: 18px;
     font-weight: 650;
@@ -178,19 +178,19 @@
     margin: 0;
 }
 
-.answer-prompt p {
+.answerPrompt p {
     color: #999a91;
     font-size: 11px;
     margin-top: 3px;
 }
 
-.answer-options {
+.answerOptions {
     display: grid;
     gap: 8px;
     grid-template-columns: 1fr 1fr;
 }
 
-.answer-option.fui-Button {
+.answerOption:global(.fui-Button) {
     align-items: center;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -208,19 +208,19 @@
     width: 100%;
 }
 
-.answer-option.fui-Button:hover {
+.answerOption:global(.fui-Button):hover {
     background: #f8f9f5;
     border-color: #b9c8b3;
     color: #676d64;
 }
 
-.answer-option.fui-Button.selected {
+.answerOption:global(.fui-Button).selected {
     background: #eef3ec;
     border-color: #8fa788;
     color: #3f6246;
 }
 
-.option-letter {
+.optionLetter {
     align-items: center;
     background: #f3f3ee;
     border-radius: 5px;
@@ -232,36 +232,36 @@
     justify-content: center;
 }
 
-.selected .option-letter {
+.selected .optionLetter {
     background: #dce8d8;
     color: #567351;
 }
 
-.option-check {
+.optionCheck {
     color: #668161;
     font-size: 12px;
     margin-left: auto;
     opacity: 0;
 }
 
-.selected .option-check {
+.selected .optionCheck {
     opacity: 1;
 }
 
-.quiz-actions {
+.quizActions {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
 
-.keyboard-hint {
+.keyboardHint {
     color: #aaa99f;
     font-size: 8px;
     letter-spacing: .65px;
 }
 
-.check-button.fui-Button {
+.checkButton:global(.fui-Button) {
     background: #395e45;
     border: 1px solid #395e45;
     border-radius: 8px;
@@ -273,30 +273,30 @@
     padding: 8px 12px;
 }
 
-.check-button.fui-Button:hover:not(:disabled) {
+.checkButton:global(.fui-Button):hover:not(:disabled) {
     background: #294b36;
     border-color: #294b36;
     color: #fff;
 }
 
-.check-button.fui-Button:disabled {
+.checkButton:global(.fui-Button):disabled {
     background: #acb5a8;
     border-color: #acb5a8;
     color: #fff;
 }
 
-.check-button span {
+.checkButton span {
     font-size: 14px;
 }
 
-.answer-result {
+.answerResult {
     align-items: center;
     display: flex;
     gap: 12px;
     min-height: 180px;
 }
 
-.result-icon {
+.resultIcon {
     align-items: center;
     background: #e8f1e7;
     border-radius: 50%;
@@ -308,16 +308,16 @@
     justify-content: center;
 }
 
-.result-incorrect .result-icon {
+.resultIncorrect .resultIcon {
     background: #f4eee4;
     color: #b77d55;
 }
 
-.result-copy {
+.resultCopy {
     align-self: center;
 }
 
-.result-kicker {
+.resultKicker {
     color: #769273;
     display: block;
     font-size: 8px;
@@ -326,137 +326,137 @@
     margin-bottom: 5px;
 }
 
-.result-incorrect .result-kicker {
+.resultIncorrect .resultKicker {
     color: #b07b56;
 }
 
-.result-copy p {
+.resultCopy p {
     color: #92948a;
     font-size: 11px;
     line-height: 1.5;
     margin-top: 5px;
 }
 
-.next-button {
+.nextButton {
     margin-left: auto;
 }
 
 @media (min-width: 1450px) {
-    .table-area {
+    .tableArea {
         min-height: 270px;
     }
 
-    .cards-row {
+    .cardsRow {
         margin-bottom: 33px;
         margin-top: 32px;
     }
 }
 
 @media (max-width: 760px) {
-    .table-area {
+    .tableArea {
         min-height: 238px;
     }
 }
 
 @media (max-width: 560px) {
-    .quiz-topline {
+    .quizTopline {
         height: 48px;
         padding: 0 14px;
     }
 
-    .round-label {
+    .roundLabel {
         font-size: 8px;
         gap: 6px;
     }
 
-    .round-label .muted {
+    .roundLabel .muted {
         font-size: 8px;
     }
 
-    .table-area {
+    .tableArea {
         margin: 0 8px;
         min-height: 213px;
         padding: 13px 11px 11px;
     }
 
-    .table-area::before {
+    .tableArea::before {
         inset: 17px 12px;
     }
 
-    .table-caption {
+    .tableCaption {
         font-size: 7px;
     }
 
-    .table-caption-right {
+    .tableCaptionRight {
         font-size: 6px;
         gap: 5px;
     }
 
-    .cards-row {
+    .cardsRow {
         gap: clamp(4px, 1.6vw, 8px);
         margin: 27px auto;
         width: 100%;
     }
 
-    .table-footer {
+    .tableFooter {
         font-size: 6px;
         letter-spacing: .35px;
     }
 
-    .table-footer > span:last-child {
+    .tableFooter > span:last-child {
         font-size: 7px;
         letter-spacing: 2px;
     }
 
-    .answer-area {
+    .answerArea {
         min-height: 0;
         padding: 16px 13px;
     }
 
-    .answer-options {
+    .answerOptions {
         gap: 7px;
     }
 
-    .answer-option.fui-Button {
+    .answerOption:global(.fui-Button) {
         font-size: 11px;
         min-height: 42px;
         padding: 5px 7px;
     }
 
-    .option-letter {
+    .optionLetter {
         flex-basis: 20px;
         height: 20px;
     }
 
-    .keyboard-hint {
+    .keyboardHint {
         font-size: 7px;
     }
 
-    .check-button.fui-Button {
+    .checkButton:global(.fui-Button) {
         min-width: 112px;
     }
 
-    .answer-result {
+    .answerResult {
         align-items: flex-start;
         flex-wrap: wrap;
         padding: 8px 0;
     }
 
-    .result-copy {
+    .resultCopy {
         max-width: calc(100% - 52px);
     }
 
-    .next-button {
+    .nextButton {
         margin-left: auto;
     }
 }
 
 @media (max-width: 370px) {
-    .answer-option.fui-Button {
+    .answerOption:global(.fui-Button) {
         font-size: 10px;
     }
 
-    .keyboard-hint {
+    .keyboardHint {
         max-width: 110px;
     }
 }

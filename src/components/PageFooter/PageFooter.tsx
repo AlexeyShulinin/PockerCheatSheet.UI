@@ -1,11 +1,11 @@
 import { Footer } from "../../constants/Footer"
 import { Icons } from "../../constants/Icons"
-import "./PageFooter.css"
+import styles from "./PageFooter.module.css"
 
-export function PageFooter() {
+export function PageFooter({ className = "" }: { className?: string }) {
     return (
-        <footer className="page-footer">
-            <span>{Footer.LoveOfGame} <span className="footer-heart">{Icons.FooterHeart}</span></span>
+        <footer className={`${styles.pageFooter} ${className}`}>
+            <span>{Footer.LoveOfGame} <span className={styles.footerHeart}>{Icons.FooterHeart}</span></span>
             <span>{Footer.Responsible}</span>
         </footer>
     )

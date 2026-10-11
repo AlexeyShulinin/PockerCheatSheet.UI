@@ -4,7 +4,7 @@ import { Brand } from "../../constants/Brand"
 import { Icons } from "../../constants/Icons"
 import { Routes } from "../../constants/Routes"
 import { SideBar } from "../../constants/SideBar"
-import "./Sidebar.css"
+import styles from "./Sidebar.module.css"
 
 export function Sidebar() {
     const navigate = useNavigate()
@@ -14,33 +14,33 @@ export function Sidebar() {
     const isAllHands = pathname === Routes.AllHands
 
     return (
-        <aside className="sidebar">
-            <a className="brand" href={Routes.Practice} onClick={(event) => { event.preventDefault(); navigate(Routes.Practice) }}>
-                <span className="brand-mark"><span>{Icons.LogoSpade}</span><span>{Icons.LogoHeart}</span></span>
-                <span>{Brand.Name}<span className="brand-period">{Brand.Period}</span></span>
+        <aside className={styles.sidebar}>
+            <a className={styles.brand} href={Routes.Practice} onClick={(event) => { event.preventDefault(); navigate(Routes.Practice) }}>
+                <span className={styles.brandMark}><span>{Icons.LogoSpade}</span><span>{Icons.LogoHeart}</span></span>
+                <span>{Brand.Name}<span className={styles.brandPeriod}>{Brand.Period}</span></span>
             </a>
-            <div className="sidebar-label">{SideBar.Table}</div>
-            <nav className="side-nav" aria-label={SideBar.MainNavigation}>
-                <Button className={`nav-link ${isPractice ? "active" : ""}`} appearance="subtle" aria-current={isPractice ? "page" : undefined} onClick={() => navigate(Routes.Practice)}>
-                    <span className="nav-icon">{Icons.Practice}</span> {SideBar.Practice} <span className="nav-arrow">{Icons.Chevron}</span>
+            <div className={styles.sidebarLabel}>{SideBar.Table}</div>
+            <nav className={styles.sideNav} aria-label={SideBar.MainNavigation}>
+                <Button className={`${styles.navLink} ${isPractice ? styles.active : ""}`} appearance="subtle" aria-current={isPractice ? "page" : undefined} onClick={() => navigate(Routes.Practice)}>
+                    <span className={styles.navIcon}>{Icons.Practice}</span> {SideBar.Practice} <span className={styles.navArrow}>{Icons.Chevron}</span>
                 </Button>
-                <Button className={`nav-link ${isGuide ? "active" : ""}`} appearance="subtle" aria-current={isGuide ? "page" : undefined} onClick={() => navigate(Routes.HandRankings)}>
-                    <span className="nav-icon">{Icons.Guide}</span> {SideBar.HandRankings}
+                <Button className={`${styles.navLink} ${isGuide ? styles.active : ""}`} appearance="subtle" aria-current={isGuide ? "page" : undefined} onClick={() => navigate(Routes.HandRankings)}>
+                    <span className={styles.navIcon}>{Icons.Guide}</span> {SideBar.HandRankings}
                 </Button>
-                <Button className={`nav-link ${isAllHands ? "active" : ""}`} appearance="subtle" aria-current={isAllHands ? "page" : undefined} onClick={() => navigate(Routes.AllHands)}>
-                    <span className="nav-icon">{Icons.AllHands}</span> {SideBar.AllHands}
+                <Button className={`${styles.navLink} ${isAllHands ? styles.active : ""}`} appearance="subtle" aria-current={isAllHands ? "page" : undefined} onClick={() => navigate(Routes.AllHands)}>
+                    <span className={styles.navIcon}>{Icons.AllHands}</span> {SideBar.AllHands}
                 </Button>
             </nav>
-            <div className="sidebar-bottom">
-                <div className="sidebar-tip">
-                    <span className="tip-icon">{Icons.Sparkle}</span>
+            <div className={styles.sidebarBottom}>
+                <div className={styles.sidebarTip}>
+                    <span className={styles.tipIcon}>{Icons.Sparkle}</span>
                     <p><strong>{SideBar.SmallSteps}</strong><br />{SideBar.TableEnergy}</p>
-                    <span className="tip-suits">{Icons.SuitSet}</span>
+                    <span className={styles.tipSuits}>{Icons.SuitSet}</span>
                 </div>
-                <div className="profile">
-                    <div className="avatar">{Icons.Spade}</div>
+                <div className={styles.profile}>
+                    <div className={styles.avatar}>{Icons.Spade}</div>
                     <div><strong>{SideBar.Rookie}</strong><span>{SideBar.LearningGame}</span></div>
-                    <span className="profile-menu">{Icons.ProfileMenu}</span>
+                    <span className={styles.profileMenu}>{Icons.ProfileMenu}</span>
                 </div>
             </div>
         </aside>

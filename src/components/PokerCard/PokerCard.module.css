@@ -1,0 +1,212 @@
+.playingCard {
+    animation: dealIn .35s both;
+    animation-delay: calc(var(--card-index) * 55ms);
+    background: linear-gradient(145deg, #fffefa, #f4f1e8);
+    border: 1px solid #e9e4d9;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px #16251e38;
+    color: #28352d;
+    display: flex;
+    flex: 1 1 0;
+    height: 106px;
+    justify-content: center;
+    max-width: 75px;
+    min-width: 0;
+    position: relative;
+    transform: rotate(calc((var(--card-index) - 2) * 1.5deg));
+    transition: transform .2s;
+}
+
+.playingCard:hover {
+    transform: translateY(-5px) rotate(0);
+    z-index: 2;
+}
+
+.redSuit {
+    color: #c45249;
+}
+
+.cardCorner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 700;
+    left: 6px;
+    line-height: 1;
+    position: absolute;
+    top: 6px;
+}
+
+.cardCorner span {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.cardCenter {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.cardCornerBottom {
+    bottom: 6px;
+    left: auto;
+    right: 6px;
+    top: auto;
+    transform: rotate(180deg);
+}
+
+@keyframes dealIn {
+    from {
+        opacity: 0;
+        transform: translateY(9px) rotate(calc((var(--card-index) - 2) * 1.5deg));
+    }
+
+    .playingCard.exampleCard,
+    .playingCard.allExampleCard {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .playingCard.exampleCard {
+        border-radius: 7px;
+        height: 86px;
+        max-width: 59px;
+    }
+
+    .exampleCard .cardCorner {
+        font-size: 14px;
+        left: 5px;
+        top: 5px;
+    }
+
+    .exampleCard .cardCorner span {
+        font-size: 10px;
+    }
+
+    .exampleCard .cardCenter {
+        font-size: 28px;
+    }
+
+    .exampleCard .cardCornerBottom {
+        bottom: 5px;
+        left: auto;
+        right: 5px;
+        top: auto;
+    }
+
+    .playingCard.allExampleCard {
+        border-radius: 6px;
+        height: 76px;
+        max-width: 54px;
+    }
+
+    .allExampleCard .cardCorner {
+        font-size: 12px;
+        left: 4px;
+        top: 4px;
+    }
+
+    .allExampleCard .cardCorner span {
+        font-size: 9px;
+    }
+
+    .allExampleCard .cardCenter {
+        font-size: 24px;
+    }
+
+    .allExampleCard .cardCornerBottom {
+        bottom: 4px;
+        left: auto;
+        right: 4px;
+        top: auto;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1450px) {
+    .playingCard {
+        height: 118px;
+        max-width: 82px;
+    }
+}
+
+@media (max-width: 560px) {
+    .playingCard {
+        border-radius: 7px;
+        height: clamp(83px, 25vw, 100px);
+    }
+
+    .cardCorner {
+        font-size: 15px;
+        left: 4px;
+        top: 5px;
+    }
+
+    .cardCorner span {
+        font-size: 10px;
+    }
+
+    .cardCenter {
+        font-size: clamp(27px, 8vw, 35px);
+    }
+
+    .cardCornerBottom {
+        bottom: 5px;
+        left: auto;
+        right: 4px;
+        top: auto;
+    }
+
+    .playingCard.exampleCard {
+        height: clamp(76px, 21vw, 88px);
+        max-width: 61px;
+    }
+
+    .exampleCard .cardCorner {
+        font-size: 13px;
+        left: 4px;
+        top: 4px;
+    }
+
+    .exampleCard .cardCorner span {
+        font-size: 9px;
+    }
+
+    .exampleCard .cardCenter {
+        font-size: 25px;
+    }
+
+    .exampleCard .cardCornerBottom {
+        bottom: 4px;
+        left: auto;
+        right: 4px;
+        top: auto;
+    }
+
+    .playingCard.allExampleCard {
+        height: 82px;
+        max-width: 58px;
+    }
+}
+
+@media (max-width: 370px) {
+    .playingCard {
+        height: 80px;
+    }
+
+    .playingCard.exampleCard {
+        height: 70px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .playingCard {
+        animation-duration: .01ms;
+        animation-iteration-count: 1;
+        transition-duration: .01ms;
+    }
+}

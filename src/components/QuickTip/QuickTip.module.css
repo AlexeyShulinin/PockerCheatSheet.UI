@@ -1,4 +1,4 @@
-.learn-card {
+.learnCard {
     background: #f0f2eb;
     border: 1px solid #e6e9de;
     border-radius: 11px;
@@ -8,12 +8,12 @@
     position: relative;
 }
 
-.learn-icon {
+.learnIcon {
     color: #758d6d;
     font-size: 16px;
 }
 
-.learn-label {
+.learnLabel {
     color: #7c8b76;
     font-size: 8px;
     font-weight: 700;
@@ -21,7 +21,7 @@
     margin-left: 6px;
 }
 
-.learn-card h3 {
+.learnCard h3 {
     color: #445541;
     font-size: 16px;
     font-weight: 650;
@@ -31,7 +31,7 @@
     z-index: 1;
 }
 
-.learn-card p {
+.learnCard p {
     color: #838a7b;
     font-size: 11px;
     line-height: 1.6;
@@ -40,7 +40,7 @@
     z-index: 1;
 }
 
-.learn-link.fui-Button {
+.learnLink:global(.fui-Button) {
     color: #587351;
     font-size: 10px;
     font-weight: 650;
@@ -51,17 +51,17 @@
     z-index: 1;
 }
 
-.learn-link.fui-Button:hover {
+.learnLink:global(.fui-Button):hover {
     background: transparent;
     color: #395e45;
 }
 
-.learn-link span {
+.learnLink span {
     font-size: 13px;
     margin-left: 5px;
 }
 
-.learn-watermark {
+.learnWatermark {
     color: #83947712;
     font-size: 150px;
     font-style: italic;
@@ -72,19 +72,19 @@
 }
 
 @media (max-width: 560px) {
-    .learn-card {
+    .learnCard {
         padding: 12px 10px;
     }
 
-    .learn-card h3 {
+    .learnCard h3 {
         font-size: 14px;
     }
 
-    .learn-card p {
+    .learnCard p {
         font-size: 10px;
     }
 
-    .learn-link.fui-Button {
+    .learnLink:global(.fui-Button) {
         font-size: 9px;
     }
 }

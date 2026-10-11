@@ -1,15 +1,15 @@
-.stats-card,
-.streak-card {
+.statsCard,
+.streakCard {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 11px;
 }
 
-.stats-card {
+.statsCard {
     padding: 16px 15px 13px;
 }
 
-.stats-title {
+.statsTitle {
     align-items: center;
     color: #788275;
     display: flex;
@@ -19,7 +19,7 @@
     letter-spacing: .75px;
 }
 
-.live-tag {
+.liveTag {
     align-items: center;
     background: #eef3ec;
     border-radius: 8px;
@@ -30,7 +30,7 @@
     padding: 4px 6px;
 }
 
-.live-tag i {
+.liveTag i {
     background: #7da47a;
     border-radius: 50%;
     display: inline-block;
@@ -38,18 +38,18 @@
     width: 5px;
 }
 
-.stats-metrics {
+.statsMetrics {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 19px 0 15px;
 }
 
-.stats-metrics > div + div {
+.statsMetrics > div + div {
     border-left: 1px solid var(--line);
     padding-left: 14px;
 }
 
-.stats-metrics strong {
+.statsMetrics strong {
     color: #364539;
     display: block;
     font-size: 30px;
@@ -58,13 +58,13 @@
     line-height: 1;
 }
 
-.metric-total,
-.metric-unit {
+.metricTotal,
+.metricUnit {
     color: #8f9b89;
     font-size: 12px;
 }
 
-.stats-metrics > div > span {
+.statsMetrics > div > span {
     color: #a2a39a;
     display: block;
     font-size: 8px;
@@ -72,19 +72,19 @@
     margin-top: 7px;
 }
 
-.progress-track {
+.progressTrack {
     height: 5px;
 }
 
-.progress-track .fui-ProgressBar__bar {
+.progressTrack :global(.fui-ProgressBar__bar) {
     background: #edefe9;
 }
 
-.progress-track .fui-ProgressBar__progress {
+.progressTrack :global(.fui-ProgressBar__progress) {
     background: #779273;
 }
 
-.stats-foot {
+.statsFoot {
     color: #9a9c91;
     display: flex;
     font-size: 9px;
@@ -92,14 +92,14 @@
     margin-top: 9px;
 }
 
-.streak-card {
+.streakCard {
     align-items: center;
     background: #faf9f5;
     display: flex;
     padding: 13px;
 }
 
-.streak-flame {
+.streakFlame {
     align-items: center;
     background: #f3eae1;
     border-radius: 8px;
@@ -112,15 +112,15 @@
     width: 34px;
 }
 
-.streak-copy > span,
-.streak-best > span {
+.streakCopy > span,
+.streakBest > span {
     color: #9a9a8f;
     display: block;
     font-size: 8px;
     letter-spacing: .6px;
 }
 
-.streak-copy strong {
+.streakCopy strong {
     color: #455445;
     display: block;
     font-size: 19px;
@@ -128,19 +128,19 @@
     margin-top: 2px;
 }
 
-.streak-copy small {
+.streakCopy small {
     color: #999b91;
     font-size: 10px;
     font-weight: 400;
 }
 
-.streak-best {
+.streakBest {
     border-left: 1px solid var(--line);
     margin-left: auto;
     padding-left: 11px;
 }
 
-.streak-best strong {
+.streakBest strong {
     color: #72856c;
     display: block;
     font-size: 13px;
@@ -149,27 +149,27 @@
 }
 
 @media (max-width: 560px) {
-    .stats-card {
+    .statsCard {
         padding: 12px 11px;
     }
 
-    .stats-metrics strong {
+    .statsMetrics strong {
         font-size: 25px;
     }
 
-    .stats-metrics > div + div {
+    .statsMetrics > div + div {
         padding-left: 9px;
     }
 
-    .stats-metrics > div > span {
+    .statsMetrics > div > span {
         font-size: 7px;
     }
 
-    .stats-foot {
+    .statsFoot {
         font-size: 8px;
     }
 
-    .streak-card {
+    .streakCard {
         padding: 10px;
     }
 }

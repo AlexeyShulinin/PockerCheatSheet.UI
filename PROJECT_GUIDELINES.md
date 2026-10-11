@@ -18,7 +18,8 @@ Build a polished, responsive application that helps users learn and practice the
 
 ## Styling and responsive design
 
-- Give every component and page a colocated CSS file and import it from its `.tsx` file. Keep `App.css` beside `App.tsx` for app-root styles only.
+- Give every component and page a colocated `.module.css` file and import its class map directly from the `.tsx` file, for example `import styles from "./Component.module.css"`. Reference local classes as `styles.className`; do not use namespace imports or an intermediate `.default` assignment.
+- Name CSS classes and keyframes in camelCase. Keep `App.module.css` beside `App.tsx` for app-root styles only.
 - Keep design tokens, resets, and genuinely global styles in `src/index.css`. Do not use a shared stylesheet for component or page selectors.
 - Use a clean, polished visual design and an Apple-like system font stack, including `-apple-system`, `BlinkMacSystemFont`, and `system-ui`; do not require downloading Apple fonts.
 - Design for mobile screens intentionally: support narrow viewports, touch targets, safe-area insets, and layouts without horizontal overflow.

@@ -1,17 +1,22 @@
 import { Button } from "@fluentui/react-components"
 import { Icons } from "../../constants/Icons"
 import { QuickTip as QuickTipCopy } from "../../constants/QuickTip"
-import "./QuickTip.css"
+import styles from "./QuickTip.module.css"
 
-export function QuickTip({ onShowGuide }: { onShowGuide: () => void }) {
+type QuickTipProps = {
+    onShowGuide: () => void
+    className?: string
+}
+
+export function QuickTip({ onShowGuide, className = "" }: QuickTipProps) {
     return (
-        <section className="learn-card">
-            <div className="learn-icon">{Icons.Add}</div>
-            <span className="learn-label">{QuickTipCopy.Label}</span>
+        <section className={`${styles.learnCard} ${className}`}>
+            <div className={styles.learnIcon}>{Icons.Add}</div>
+            <span className={styles.learnLabel}>{QuickTipCopy.Label}</span>
             <h3>{QuickTipCopy.Title}</h3>
             <p>{QuickTipCopy.Description}</p>
-            <Button className="learn-link" appearance="subtle" onClick={onShowGuide}>{QuickTipCopy.Explore} <span>{Icons.ExternalArrow}</span></Button>
-            <span className="learn-watermark">{Icons.Ace}</span>
+            <Button className={styles.learnLink} appearance="subtle" onClick={onShowGuide}>{QuickTipCopy.Explore} <span>{Icons.ExternalArrow}</span></Button>
+            <span className={styles.learnWatermark}>{Icons.Ace}</span>
         </section>
     )
 }

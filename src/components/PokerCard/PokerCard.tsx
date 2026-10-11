@@ -1,21 +1,27 @@
 import type { CSSProperties } from "react"
 import type { Card } from "../../types/poker"
 import { rankName } from "../../utils/poker"
-import "./PokerCard.css"
+import styles from "./PokerCard.module.css"
 
 type PokerCardProps = {
   card: Card
   index: number
-  className?: string
+  variant?: "example" | "allExample"
 }
 
-export function PokerCard({ card, index, className = "" }: PokerCardProps) {
+export function PokerCard({ card, index, variant }: PokerCardProps) {
     const isRed = card.suit === "♥" || card.suit === "♦"
+    const variantClass = variant === "example"
+        ? styles.exampleCard
+        : variant === "allExample"
+            ? styles.allExampleCard
+            : ""
+
     return (
-        <div className={`playing-card ${isRed ? "red-suit" : ""} ${className}`} style={{ "--card-index": index } as CSSProperties}>
-            <span className="card-corner">{rankName(card.rank)}<span>{card.suit}</span></span>
-            <span className="card-center">{card.suit}</span>
-            <span className="card-corner card-corner-bottom">{rankName(card.rank)}<span>{card.suit}</span></span>
+        <div className={`${styles.playingCard} ${isRed ? styles.redSuit : ""} ${variantClass}`} style={{ "--card-index": index } as CSSProperties}>
+            <span className={styles.cardCorner}>{rankName(card.rank)}<span>{card.suit}</span></span>
+            <span className={styles.cardCenter}>{card.suit}</span>
+            <span className={`${styles.cardCorner} ${styles.cardCornerBottom}`}>{rankName(card.rank)}<span>{card.suit}</span></span>
         </div>
     )
 }

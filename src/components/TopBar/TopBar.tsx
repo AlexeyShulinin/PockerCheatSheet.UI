@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import { Routes } from "../../constants/Routes"
 import { TopBar as TopBarCopy } from "../../constants/TopBar"
-import "./TopBar.css"
+import styles from "./TopBar.module.css"
 
 export function TopBar() {
     const { pathname } = useLocation()
@@ -12,9 +12,9 @@ export function TopBar() {
             : TopBarCopy.Practice
 
     return (
-        <header className="topbar">
-            <div className="breadcrumbs"><span>{TopBarCopy.Learn}</span><span className="crumb-slash">/</span><strong>{pageTitle}</strong></div>
-            <div className="topbar-right"><span className="online-dot" /> <span>{TopBarCopy.Coach}</span><span className="topbar-divider" /><span className="topbar-level">{TopBarCopy.Level}</span></div>
+        <header className={styles.topbar}>
+            <div className={styles.breadcrumbs}><span>{TopBarCopy.Learn}</span><span className={styles.crumbSlash}>/</span><strong>{pageTitle}</strong></div>
+            <div className={styles.topbarRight}><span className={styles.onlineDot} /> <span>{TopBarCopy.Coach}</span><span className={styles.topbarDivider} /><span className={styles.topbarLevel}>{TopBarCopy.Level}</span></div>
         </header>
     )
 }

@@ -1,11 +1,11 @@
-.practice-layout {
+.practiceLayout {
     align-items: start;
     display: grid;
     gap: 18px;
     grid-template-columns: minmax(0, 1fr) 245px;
 }
 
-.daily-badge {
+.dailyBadge {
     align-items: center;
     background: #f0f2eb;
     border: 1px solid #e8ebe2;
@@ -16,34 +16,34 @@
     padding: 10px 13px;
 }
 
-.daily-badge > span {
+.dailyBadge > span {
     color: #72896c;
     font-size: 18px;
 }
 
-.daily-badge strong,
-.daily-badge small {
+.dailyBadge strong,
+.dailyBadge small {
     display: block;
 }
 
-.daily-badge strong {
+.dailyBadge strong {
     color: #536450;
     font-size: 9px;
     letter-spacing: .8px;
 }
 
-.daily-badge small {
+.dailyBadge small {
     color: #999d92;
     font-size: 11px;
     margin-top: 4px;
 }
 
-.practice-layout .stats-column {
+.statsColumn {
     display: grid;
     gap: 12px;
 }
 
-.session-note {
+.sessionNote {
     align-items: center;
     color: #a09f95;
     display: flex;
@@ -53,42 +53,42 @@
     padding-top: 1px;
 }
 
-.session-note span {
+.sessionNote span {
     color: #87957d;
     font-size: 12px;
 }
 
 @media (max-width: 1050px) {
-    .practice-layout {
+    .practiceLayout {
         gap: 13px;
         grid-template-columns: minmax(0, 1fr) 220px;
     }
 }
 
 @media (max-width: 760px) {
-    .daily-badge {
+    .dailyBadge {
         display: none;
     }
 
-    .practice-layout {
+    .practiceLayout {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .practice-layout .stats-column {
+    .statsColumn {
         grid-template-columns: 1fr 1fr;
     }
 
-    .practice-layout .learn-card {
+    .tipGridSpan {
         grid-row: span 2;
     }
 
-    .session-note {
+    .sessionNote {
         grid-column: 1 / -1;
     }
 }
 
 @media (max-width: 560px) {
-    .practice-layout .stats-column {
+    .statsColumn {
         gap: 8px;
     }
 }

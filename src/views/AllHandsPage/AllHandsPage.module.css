@@ -1,23 +1,23 @@
-.all-hands-grid {
+.allHandsGrid {
     display: grid;
     gap: 12px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.all-hand-card {
+.allHandCard {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 11px;
     padding: 15px;
 }
 
-.all-hand-heading {
+.allHandHeading {
     align-items: center;
     display: flex;
     gap: 10px;
 }
 
-.all-hand-rank {
+.allHandRank {
     align-items: center;
     background: #f0f3ed;
     border-radius: 7px;
@@ -30,18 +30,18 @@
     justify-content: center;
 }
 
-.all-hand-title {
+.allHandTitle {
     min-width: 0;
 }
 
-.all-hand-title h2 {
+.allHandTitle h2 {
     color: #39443b;
     font-size: 14px;
     font-weight: 650;
     margin: 0;
 }
 
-.all-hand-title > span {
+.allHandTitle > span {
     align-items: center;
     color: #9a9c91;
     display: flex;
@@ -50,14 +50,14 @@
     margin-top: 4px;
 }
 
-.all-hand-title i {
+.allHandTitle i {
     background: #c6c9be;
     border-radius: 50%;
     height: 3px;
     width: 3px;
 }
 
-.all-hand-example {
+.allHandExample {
     align-items: center;
     background: #315942;
     background-image: radial-gradient(ellipse at 50% 25%, #426a50, #2c513e);
@@ -71,36 +71,7 @@
     padding: 9px;
 }
 
-.playing-card.all-example-card {
-    border-radius: 6px;
-    flex: 1 1 0;
-    height: 76px;
-    max-width: 54px;
-    min-width: 0;
-}
-
-.all-example-card .card-corner {
-    font-size: 12px;
-    left: 4px;
-    top: 4px;
-}
-
-.all-example-card .card-corner span {
-    font-size: 9px;
-}
-
-.all-example-card .card-center {
-    font-size: 24px;
-}
-
-.all-example-card .card-corner-bottom {
-    bottom: 4px;
-    left: auto;
-    right: 4px;
-    top: auto;
-}
-
-.all-hand-description {
+.allHandDescription {
     color: #85877f;
     font-size: 11px;
     line-height: 1.5;
@@ -109,28 +80,24 @@
 }
 
 @media (max-width: 760px) {
-    .all-hands-grid {
+    .allHandsGrid {
         grid-template-columns: minmax(0, 1fr);
     }
 }
 
 @media (max-width: 560px) {
-    .all-hands-page .page-heading {
+    .allHandsPageHeading {
         align-items: flex-start;
         flex-wrap: wrap;
         gap: 12px;
     }
 
-    .all-hand-card {
+    .allHandCard {
         padding: 13px;
     }
 
-    .all-hand-example {
+    .allHandExample {
         min-height: 102px;
     }
 
-    .playing-card.all-example-card {
-        height: 82px;
-        max-width: 58px;
-    }
 }

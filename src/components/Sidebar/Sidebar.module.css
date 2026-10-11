@@ -23,7 +23,7 @@
     text-decoration: none;
 }
 
-.brand-mark {
+.brandMark {
     align-items: center;
     background: #e5eee6;
     border-radius: 11px;
@@ -37,16 +37,16 @@
     width: 34px;
 }
 
-.brand-mark span:last-child {
+.brandMark span:last-child {
     color: #c96853;
     font-size: 13px;
 }
 
-.brand-period {
+.brandPeriod {
     color: #d17a61;
 }
 
-.sidebar-label {
+.sidebarLabel {
     color: var(--subtle);
     font-size: 10px;
     font-weight: 700;
@@ -54,12 +54,12 @@
     margin: 52px 0 13px 10px;
 }
 
-.side-nav {
+.sideNav {
     display: grid;
     gap: 5px;
 }
 
-.nav-link.fui-Button {
+.navLink:global(.fui-Button) {
     align-items: center;
     border-radius: 8px;
     color: #68736a;
@@ -73,33 +73,33 @@
     width: 100%;
 }
 
-.nav-link.fui-Button:hover {
+.navLink:global(.fui-Button):hover {
     background: #f1f4ef;
     color: #294e3b;
 }
 
-.nav-link.fui-Button.active {
+.navLink:global(.fui-Button).active {
     background: #e9f0e8;
     color: #315c45;
     font-weight: 650;
 }
 
-.nav-icon {
+.navIcon {
     color: #758377;
     font-size: 16px;
     width: 17px;
 }
 
-.nav-arrow {
+.navArrow {
     font-size: 18px;
     margin-left: auto;
 }
 
-.sidebar-bottom {
+.sidebarBottom {
     margin-top: auto;
 }
 
-.sidebar-tip {
+.sidebarTip {
     background: #f1f3ed;
     border: 1px solid #e8ece3;
     border-radius: 10px;
@@ -108,24 +108,24 @@
     padding: 14px 13px 12px;
 }
 
-.tip-icon {
+.tipIcon {
     color: #708566;
     font-size: 15px;
 }
 
-.sidebar-tip p {
+.sidebarTip p {
     color: #70796c;
     font-size: 13px;
     line-height: 1.5;
     margin: 9px 0 0;
 }
 
-.sidebar-tip p strong {
+.sidebarTip p strong {
     color: #385141;
     font-size: 15px;
 }
 
-.tip-suits {
+.tipSuits {
     color: #9aa493;
     display: block;
     font-size: 10px;
@@ -170,7 +170,7 @@
     margin-top: 3px;
 }
 
-.profile-menu {
+.profileMenu {
     color: #85887f;
     font-size: 18px;
     margin-left: auto;
@@ -199,26 +199,26 @@
     }
 
     .brand,
-    .sidebar-label,
-    .sidebar-bottom {
+    .sidebarLabel,
+    .sidebarBottom {
         display: none;
     }
 
-    .side-nav {
+    .sideNav {
         display: flex;
         gap: 8px;
         justify-content: center;
         width: 100%;
     }
 
-    .nav-link.fui-Button {
+    .navLink:global(.fui-Button) {
         border-radius: 10px;
         justify-content: center;
         max-width: 220px;
         min-height: 42px;
     }
 
-    .nav-arrow {
+    .navArrow {
         display: none;
     }
 }

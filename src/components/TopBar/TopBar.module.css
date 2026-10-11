@@ -20,11 +20,11 @@
     font-weight: 600;
 }
 
-.crumb-slash {
+.crumbSlash {
     color: #cacbc2;
 }
 
-.topbar-right {
+.topbarRight {
     align-items: center;
     color: #92968e;
     display: flex;
@@ -34,7 +34,7 @@
     letter-spacing: .8px;
 }
 
-.online-dot {
+.onlineDot {
     background: #7da47a;
     border-radius: 50%;
     display: inline-block;
@@ -42,14 +42,14 @@
     width: 6px;
 }
 
-.topbar-divider {
+.topbarDivider {
     background: var(--line);
     height: 16px;
     margin: 0 5px;
     width: 1px;
 }
 
-.topbar-level {
+.topbarLevel {
     color: #778477;
     font-size: 9px;
 }
@@ -60,21 +60,21 @@
         padding: 0 5%;
     }
 
-    .topbar-right {
+    .topbarRight {
         font-size: 8px;
     }
 }
 
 @media (max-width: 560px) {
-    .topbar-right {
+    .topbarRight {
         gap: 5px;
     }
 
-    .topbar-right > span:nth-child(2) {
+    .topbarRight > span:nth-child(2) {
         display: none;
     }
 
-    .topbar-divider {
+    .topbarDivider {
         margin: 0 2px;
     }
 }
